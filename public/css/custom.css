@@ -3,7 +3,6 @@
     border-radius: 50%;
     font-size: 1.2em;
 }
-
 #home_user{
     width: 6rem;
     height: 6rem;
@@ -46,6 +45,7 @@
 #main{
     height: 85vh;
     margin-top: 0.5rem;
-    border-radius: 1rem  1rem ;
+    border-radius: 1rem;
     border-bottom: none;
+    box-shadow: inset 3px 3px 4px rgba(70, 64, 64, 0.514),inset -3px -3px 7px rgb(114, 112, 112);
 }
