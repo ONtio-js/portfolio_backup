@@ -49,3 +49,12 @@
     border-bottom: none;
     box-shadow: inset 3px 3px 4px rgba(70, 64, 64, 0.514),inset -3px -3px 7px rgb(114, 112, 112);
 }
+#intro{
+    height: 60px;
+    border-radius: 1rem;
+    background-color: rgba(113, 121, 136, 0.322);
+}
+footer{
+    box-shadow: inset 3px 3px 4px rgba(70, 64, 64, 0.514),inset -3px -3px 7px rgb(114, 112, 112);
+    border-radius: 0.75rem;
+}
