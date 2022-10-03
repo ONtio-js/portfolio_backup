@@ -14,16 +14,22 @@ home_btn.addEventListener('click',toggle_home_button);
 function toggle_button(e){
   if(!showIcon){
     social_icon.classList.remove('hidden');
+    social_icon.classList.remove('animate-spin')
+    social_icon.classList.add('animate-bounce')
     // social_icon.classList.remove('')
     setTimeout(()=>{
-      social_icon.classList.remove('animate-bounce')
+      social_icon.classList.remove('animate-bounce');
     },1500)
-    social_icon.classList.add('animate-bounce')
     showIcon = true;
   }
   else{
+    social_icon.classList.add('animate-spin');
+    setTimeout(() => {
     social_icon.classList.add('hidden');
+    }, 500);
+    
     showIcon =false;
+    
   }
 }
 function toggle_home_button(e){

@@ -810,3 +810,9 @@ video {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
 }
+
+@media (min-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+}
