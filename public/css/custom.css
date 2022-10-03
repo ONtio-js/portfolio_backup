@@ -43,3 +43,9 @@
 #code{
     color: yellow;
 }
+#main{
+    height: 85vh;
+    margin-top: 0.5rem;
+    border-radius: 1rem  1rem ;
+    border-bottom: none;
+}
