@@ -592,43 +592,6 @@ video {
   width: 100%;
 }
 
-.rotate-90 {
-  --tw-rotate: 90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-rotate-180 {
-  --tw-rotate: -180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-180 {
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-45 {
-  --tw-rotate: 45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-@-webkit-keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin {
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
-}
-
 @-webkit-keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -662,23 +625,59 @@ video {
           animation: bounce 1s infinite;
 }
 
-@-webkit-keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
 
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
+.animate-bounce-slow {
+  -webkit-animation: bounce 1.5s linear infinite;
+          animation: bounce 1.5s linear infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
 
-.animate-ping {
-  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+.animate-bounce-slow1 {
+  -webkit-animation: bounce 3s linear infinite;
+          animation: bounce 3s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 .cursor-pointer {
@@ -781,16 +780,8 @@ video {
   transition-duration: 150ms;
 }
 
-.delay-700 {
-  transition-delay: 700ms;
-}
-
 .delay-1000 {
   transition-delay: 1000ms;
-}
-
-.delay-150 {
-  transition-delay: 150ms;
 }
 
 .delay-500 {
@@ -799,12 +790,6 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover\:scale-150:hover {
-  --tw-scale-x: 1.5;
-  --tw-scale-y: 1.5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @keyframes bounce {
@@ -824,38 +809,4 @@ video {
 .hover\:animate-bounce:hover {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  @-webkit-keyframes bounce {
-    0%, 100% {
-      transform: translateY(-25%);
-      -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-              animation-timing-function: cubic-bezier(0.8,0,1,1);
-    }
-
-    50% {
-      transform: none;
-      -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-              animation-timing-function: cubic-bezier(0,0,0.2,1);
-    }
-  }
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(-25%);
-      -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-              animation-timing-function: cubic-bezier(0.8,0,1,1);
-    }
-
-    50% {
-      transform: none;
-      -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-              animation-timing-function: cubic-bezier(0,0,0.2,1);
-    }
-  }
-
-  .motion-reduce\:animate-bounce {
-    -webkit-animation: bounce 1s infinite;
-            animation: bounce 1s infinite;
-  }
 }
